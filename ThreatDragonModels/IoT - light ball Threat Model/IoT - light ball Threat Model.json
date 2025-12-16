@@ -150,7 +150,7 @@
                 }
               ],
               "threatFrequency": {
-                "spoofing": 2,
+                "spoofing": 3,
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 0,
@@ -393,10 +393,10 @@
               "threats": [
                 {
                   "id": "c562f549-4cb8-4b7f-8f9d-b17746276b37",
-                  "title": "Denial of Service - API Flooding",
+                  "title": "API Flooding",
                   "status": "Open",
                   "severity": "Medium",
-                  "type": "Spoofing",
+                  "type": "Denial of service",
                   "description": "Mass sending of queries to the manufacturer's API, blocking the ability to control devices for all users.",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
                   "modelType": "STRIDE",
@@ -410,7 +410,7 @@
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 0,
-                "denialOfService": 0,
+                "denialOfService": 1,
                 "elevationOfPrivilege": 0
               }
             }
@@ -548,10 +548,10 @@
                 },
                 {
                   "id": "50d96268-8229-4cce-a54f-2af5e625a856",
-                  "title": "Denial of Service - Blocking the WiFi band",
+                  "title": "Blocking the WiFi band",
                   "status": "Open",
                   "severity": "TBD",
-                  "type": "Tampering",
+                  "type": "Denial of service",
                   "description": "The attacker sends thousands of de-auth packets to the light bulb, causing it to become unreachable (‘flashing’ or unresponsive).",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
                   "modelType": "STRIDE",
@@ -561,33 +561,39 @@
                 },
                 {
                   "id": "5d7f3542-53fb-425f-860a-0eeaece252b8",
-                  "title": "Elevation of Privilege - Escalation to root",
+                  "title": "Escalation to root",
                   "status": "Open",
                   "severity": "Medium",
-                  "type": "Repudiation",
+                  "type": "Elevation of privilege",
                   "description": "Exploiting a buffer overflow vulnerability in the network light bulb service to gain full privileges on the device's Linux system.",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 8,
                   "score": ""
+                },
+                {
+                  "id": "fba0a746-c77f-4716-9438-0f6c1d12775a",
+                  "title": "Pivoting / Lateral Movement do sieci LAN",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Elevation of privilege",
+                  "description": "The compromised IoT device serves as a gateway for attacks on other devices in the local network (routers, NAS drives, computers), bypassing edge firewall security.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 9,
+                  "score": ""
                 }
               ],
               "threatFrequency": {
-                "spoofing": 2,
+                "spoofing": 3,
                 "tampering": 1,
                 "repudiation": 1,
                 "informationDisclosure": 0,
-                "denialOfService": 0,
-                "elevationOfPrivilege": 0
+                "denialOfService": 1,
+                "elevationOfPrivilege": 2
               }
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -1099,17 +1105,7 @@
               "cell": "d5ba4a69-bc9e-4bc4-b33c-cdefb99d2b8d",
               "port": "741865ac-cd01-48e5-aa61-89529c90b6e4"
             },
-            "vertices": [],
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead"
-              ],
-              "name": null
-            }
+            "vertices": []
           },
           {
             "shape": "flow",
