@@ -1,0 +1,16 @@
+{
+  "version": "2.5.0",
+  "summary": {
+    "title": "IoT - light ball Threat Model",
+    "owner": "Patryk",
+    "description": "A smart LED bulb system that connects directly to your home WiFi network. The system allows remote control of lighting (switching on, switching off, changing colours, schedules) via a dedicated mobile application that communicates with the device through the manufacturer's cloud (API).",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [],
+    "diagramTop": 0,
+    "reviewer": "Patryk",
+    "threatTop": 0
+  }
+}
